@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2Twin Interest Form - University of Arizona Honors</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0c2e5c 0%, #1a4b8c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .form-container {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 600px;
+            width: 100%;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0c2e5c 0%, #1a4b8c 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .cta-section {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-left: 4px solid #ff6b35;
+        }
+
+        .cta-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+
+        .cta-description {
+            font-size: 14px;
+            color: #6c757d;
+            line-height: 1.5;
+        }
+
+        .form-content {
+            padding: 20px 30px 30px 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #1a4b8c;
+            box-shadow: 0 0 0 3px rgba(26, 75, 140, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        .submit-section {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .contact-info a {
+            color: #1a4b8c;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                margin: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+            
+            .form-content, .submit-section, .cta-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="header">
+            <h1 class="title">B2Twin</h1>
+            <p class="subtitle">AI & World Models | Honors VIP | Fall 2025</p>
+        </div>
+
+        <div class="cta-section">
+            <div class="cta-text">Explore the co-evolution of machine and human intelligence.</div>
+            <div class="cta-description">
+                Help lead a team building the digital twin of Biosphere 2 with metaverse tools, artificial intelligence, and robots.
+            </div>
+        </div>
+
+        <form class="form-content" id="interestForm">
+            <div class="form-group">
+                <label class="form-label" for="studentName">Student Name</label>
+                <input type="text" id="studentName" name="studentName" class="form-input" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="studentEmail">Student Email</label>
+                <input type="email" id="studentEmail" name="studentEmail" class="form-input" placeholder="myname@arizona.edu" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="classStanding">Class Standing</label>
+                <select id="classStanding" name="classStanding" class="form-select" required>
+                    <option value="">Select your year</option>
+                    <option value="Freshman">Freshman</option>
+                    <option value="Sophomore">Sophomore</option>
+                    <option value="Junior">Junior</option>
+                    <option value="Senior">Senior</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="relevantExperience">Relevant Experience</label>
+                <textarea 
+                    id="relevantExperience" 
+                    name="relevantExperience" 
+                    class="form-textarea" 
+                    placeholder="Brief description of any relevant experience with AI, programming, 3D modeling, research, or other technical projects..."
+                    required></textarea>
+            </div>
+        </form>
+
+        <div class="submit-section">
+            <button type="button" class="submit-btn" onclick="submitForm()">Submit Interest Form</button>
+            <div class="contact-info">
+                Questions? Email <a href="mailto:jefflarsen@arizona.edu">jefflarsen@arizona.edu</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('interestForm');
+            const formData = new FormData(form);
+            
+            // Validate required fields
+            const studentName = formData.get('studentName');
+            const studentEmail = formData.get('studentEmail');
+            const classStanding = formData.get('classStanding');
+            const relevantExperience = formData.get('relevantExperience');
+            
+            if (!studentName || !studentEmail || !classStanding || !relevantExperience) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Create email content
+            const subject = 'B2Twin Interest Form - ' + studentName;
+            const body = 
+                'B2TWIN HONORS VIP INTEREST FORM\n' +
+                '=====================================\n\n' +
+                'Student Name: ' + studentName + '\n' +
+                'Student Email: ' + studentEmail + '\n' +
+                'Class Standing: ' + classStanding + '\n' +
+                'Relevant Experience:\n' + relevantExperience + '\n\n' +
+                '=====================================\n' +
+                'Submitted via B2Twin Interest Form\n' +
+                'Program: AI and World Models Honors VIP\n' +
+                'Semester: Fall 2025 Leadership Team';
+            
+            // Check if we're on file:// protocol (local file)
+            if (window.location.protocol === 'file:') {
+                showEmailContent(subject, body);
+                return;
+            }
+            
+            // Try mailto for hosted versions
+            const mailtoLink = 'mailto:jefflarsen@arizona.edu?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+            
+            // Create a temporary link and click it
+            const link = document.createElement('a');
+            link.href = mailtoLink;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            
+            try {
+                link.click();
+                document.body.removeChild(link);
+                
+                // Show instructions
+                setTimeout(() => {
+                    alert('If your email client didn\'t open, please check if you have a default email client configured, or copy the information from the popup that will appear next.');
+                    showEmailContent(subject, body);
+                }, 1000);
+            } catch (error) {
+                document.body.removeChild(link);
+                showEmailContent(subject, body);
+            }
+        }
+        
+        function showEmailContent(subject, body) {
+            // Create modal with email content
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                background: rgba(0,0,0,0.8); display: flex; align-items: center; 
+                justify-content: center; z-index: 1000; padding: 20px; box-sizing: border-box;
+            `;
+            
+            const content = document.createElement('div');
+            content.style.cssText = `
+                background: white; padding: 30px; border-radius: 12px; 
+                max-width: 600px; width: 100%; max-height: 90%; overflow: auto;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            `;
+            
+            content.innerHTML = `
+                <h3 style="margin-top: 0; color: #0c2e5c;">Copy This Email Information</h3>
+                <p style="margin-bottom: 15px; color: #666;">Please copy the information below and send it manually via email:</p>
+                
+                <div style="margin: 15px 0;">
+                    <strong>To:</strong> jefflarsen@arizona.edu
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <strong>Subject:</strong><br>
+                    <input type="text" value="${subject}" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; margin-top: 5px;" readonly onclick="this.select()">
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <strong>Message:</strong><br>
+                    <textarea style="width: 100%; height: 200px; margin-top: 5px; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace; font-size: 14px; resize: vertical;" readonly onclick="this.select()">${body}</textarea>
+                </div>
+                
+                <div style="text-align: center; margin-top: 20px;">
+                    <button onclick="copyAllToClipboard('${subject.replace(/'/g, "\\'")}', '${body.replace(/'/g, "\\'").replace(/\n/g, '\\n')}')" style="padding: 12px 24px; background: #1a4b8c; color: white; border: none; border-radius: 6px; cursor: pointer; margin-right: 10px; font-size: 16px;">Copy All</button>
+                    <button onclick="this.parentElement.parentElement.parentElement.remove()" style="padding: 12px 24px; background: #ff6b35; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">Close</button>
+                </div>
+                
+                <p style="font-size: 12px; color: #666; margin-top: 15px; text-align: center;">
+                    <em>Tip: Click on any text field above to select all text for easy copying</em>
+                </p>
+            `;
+            
+            modal.appendChild(content);
+            document.body.appendChild(modal);
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.remove();
+                }
+            });
+        }
+        
+        function copyAllToClipboard(subject, body) {
+            const fullText = `To: jefflarsen@arizona.edu\n\nSubject: ${subject}\n\nMessage:\n${body}`;
+            
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(fullText).then(() => {
+                    alert('Email information copied to clipboard! You can now paste it into your email client.');
+                }).catch(() => {
+                    alert('Could not copy automatically. Please manually copy the text from the fields above.');
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = fullText;
+                textArea.style.position = 'fixed';
+                textArea.style.opacity = '0';
+                document.body.appendChild(textArea);
+                textArea.select();
+                
+                try {
+                    document.execCommand('copy');
+                    alert('Email information copied to clipboard! You can now paste it into your email client.');
+                } catch (err) {
+                    alert('Could not copy automatically. Please manually copy the text from the fields above.');
+                }
+                
+                document.body.removeChild(textArea);
+            }
+        }
+        
+        // Add enter key support for better UX
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter' && event.ctrlKey) {
+                submitForm();
+            }
+        });
+    </script>
+</body>
+</html>
